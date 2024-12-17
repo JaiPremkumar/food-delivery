@@ -3,6 +3,7 @@ const app = express();
 const cookieParser = require('cookie-parser')
 const path = require('path')
 const dotenv = require('dotenv');
+const cors = require('cors')
 
 dotenv.config({path:path.join(__dirname,"config/config.env")});
 
@@ -25,6 +26,8 @@ app.use('/api/v1/',users)
 app.use('/api/v1/',restarunt)
 app.use('/api/v1/',kitchen)
 app.use('/api/v1/',payment)
+
+
 
 module.exports = app
 
