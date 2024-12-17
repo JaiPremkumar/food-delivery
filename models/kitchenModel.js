@@ -66,6 +66,8 @@ const kitchenSchema = new mongoose.Schema({
         }
 })
 
-let Schema = mongoose.model('kitchen',kitchenSchema)
+let Schema = mongoose.model('kitchens',kitchenSchema)
 
 module.exports = Schema
+
+//mongodb+srv://premjai411:86HkmKGsm7n90OF2@cloud-cluster.nkcoz.mongodb.net/?retryWrites=true&w=majority&appName=Cloud-Cluster

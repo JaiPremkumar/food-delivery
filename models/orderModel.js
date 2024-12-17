@@ -90,6 +90,6 @@ const orderSchema = new mongoose.Schema({
 
 })
 
-let Schema = mongoose.model('order',orderSchema)
+let Schema = mongoose.model('orders',orderSchema)
 
 module.exports = Schema

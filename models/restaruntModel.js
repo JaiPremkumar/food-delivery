@@ -62,6 +62,6 @@ const restaruntSchema = new mongoose.Schema({
     
 })
 
-let Schema = mongoose.model('restarunt',restaruntSchema)
+let Schema = mongoose.model('restarunts',restaruntSchema)
 
 module.exports = Schema
