@@ -25,9 +25,14 @@ app.use('/api/v1',orders)
 app.use('/api/v1/',users)
 app.use('/api/v1/',restarunt)
 app.use('/api/v1/',kitchen)
-app.use('/api/v1/',payment)
+app.use('/api/v1/',payment) 
 
-
+if(process.env.NODE_ENV = "development"){
+   app.use(express.static(path.join(__dirname,'../frontent/my-app/build')))
+   app.get('*',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'../frontent/my-app/build/index.html'))
+   })
+}
 
 module.exports = app
 

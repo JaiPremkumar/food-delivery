@@ -1,12 +1,12 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 
 exports.paymentProcess=async (req,res,next) => {
+    const { amount, token } = req.body;
     const paymentInten = await stripe.paymentIntents.create({
-        amount:req.body.amount,
+       
+        amount:amount,
         currency:"usd",
-        description:"TEST PAYMENT",
-        metadata:{integration_check:"accept_payment"},
-        shipping:req.body.shipping
+        description: 'Charge for test@example.com',
     })
     res.status(200).json({
         success:true,
