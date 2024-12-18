@@ -19,7 +19,7 @@ const orders = require('./routes/order')
 const restarunt = require('./routes/restarunt') 
 const kitchen = require('./routes/kitchen')
 const payment = require('./routes/payment')
-
+require('../frontent/my-app/build/')
 app.use('/api/v1/',products)
 app.use('/api/v1',orders)
 app.use('/api/v1/',users)
@@ -30,7 +30,7 @@ app.use('/api/v1/',payment)
 if(process.env.NODE_ENV = "development"){
    app.use(express.static(path.join(__dirname,'../frontent/my-app/build')))
    app.get('*',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'../frontent/my-app/build/index.html'))
+    res.sendFile(path.join(__dirname,'../frontent/my-app/build/index.html'))
    })
 }
 
