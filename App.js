@@ -19,7 +19,7 @@ const orders = require('./routes/order')
 const restarunt = require('./routes/restarunt') 
 const kitchen = require('./routes/kitchen')
 const payment = require('./routes/payment')
-require('../frontent/my-app/build/')
+
 app.use('/api/v1/',products)
 app.use('/api/v1',orders)
 app.use('/api/v1/',users)
